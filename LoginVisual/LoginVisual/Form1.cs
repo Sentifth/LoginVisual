@@ -14,6 +14,7 @@ namespace LoginVisual
     public partial class Form1 : Form
     {
         entrada logueo;
+        incorrecto x;
         public Form1()
         {
             InitializeComponent();
@@ -88,7 +89,8 @@ namespace LoginVisual
         {
             if ((txtuser.Text != "") && (txtpass.Text != ""))
             {
-
+                x = new incorrecto();
+                x.Show();
                 if ((txtuser.Text == "juancho") && (txtpass.Text == "123tamarindo"))
                 {
                     logueo = new entrada();
@@ -96,6 +98,7 @@ namespace LoginVisual
                     this.Hide();
                 }
             }
+
         }
 
     }
